@@ -310,17 +310,425 @@ footer a{color:var(--accent);text-decoration:none}
   </div>
 
   <div class="stat-banner reveal">
-    <div class="stat-item"><div class="stat-num">20+</div>桌面 + iOS + Android</div></div></div>
-
+    <div class="stat-item"><div class="stat-num">20+</div>  </div>
 </div>
 
 <hr class="divider">
 
->桌面 + iOS + Android</div></div>
+
+<style>
+/* Screenshot/mockup styles */
+.screenshot-frame{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  margin:20px 0;
+  box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 0 1px rgba(139,124,246,0.1);
+  position:relative;
+}
+.screenshot-bar{
+  background:var(--surface2);
+  padding:10px 14px;
+  display:flex;align-items:center;gap:6px;
+  border-bottom:1px solid var(--border);
+}
+.screenshot-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.screenshot-body{padding:0;overflow:hidden}
+.screenshot-body img,.screenshot-body svg{width:100%;height:auto;display:block}
+.screenshot-label{
+  position:absolute;bottom:12px;right:12px;
+  background:rgba(0,0,0,0.7);
+  border:1px solid var(--border);
+  color:var(--text3);font-size:10px;
+  padding:3px 10px;border-radius:20px;
+  backdrop-filter:blur(4px);
+  font-family:inherit;
+}
+.screenshot-tag{
+  position:absolute;top:12px;left:12px;
+  font-size:10px;font-weight:700;
+  padding:3px 10px;border-radius:20px;
+  backdrop-filter:blur(4px);
+  font-family:inherit;
+}
+.tag-purple{background:rgba(139,124,246,0.2);color:#9d8cf8;border:1px solid rgba(139,124,246,0.3)}
+.tag-pink{background:rgba(244,114,182,0.2);color:#f472b6;border:1px solid rgba(244,114,182,0.3)}
+.tag-green{background:rgba(74,222,128,0.15);color:#4ade80;border:1px solid rgba(74,222,128,0.3)}
+.tag-yellow{background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.3)}
+.tag-blue{background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3)}
+
+.usecase-section{margin:60px 0}
+.usecase-header{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.usecase-num{font-size:11px;font-weight:700;color:var(--accent);background:rgba(139,124,246,0.1);border:1px solid rgba(139,124,246,0.2);padding:4px 12px;border-radius:100px}
+.usecase-title{font-size:20px;font-weight:700;color:var(--text)}
+.usecase-desc{font-size:14px;color:var(--text2);max-width:600px;margin-bottom:24px;line-height:1.7}
+.usecase-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.usecase-text{flex:1}
+.usecase-visual{flex:1}
+
+@media(max-width:768px){
+  .usecase-grid{grid-template-columns:1fr}
+  .usecase-visual{order:-1}
+}
+</style>
+
+<!-- USE CASES SECTION -->
+<div class="section" id="usecases">
+  <div class="section-label"><span class="num">NEW</span> 实用案例</div>
+  <div class="section-eyebrow"><div class="line"></div><h2>Real-World Scenarios</h2></div>
+  <p class="section-intro">OpenClaw 在真实场景中的应用，以下为实际运行截图模拟。</p>
+
+  <!-- USE CASE 1: Calendar -->
+  <div class="usecase-section reveal">
+    <div class="usecase-header">
+      <span class="usecase-num">CASE_01</span>
+      <span class="usecase-title">📅 智能日程管理</span>
+    </div>
+    <p class="usecase-desc">连接日历 + 消息平台，每天早上自动推送今日日程摘要，重要会议提前提醒。OpenClaw 自动学习你的日程习惯，越用越准。</p>
+    <div class="usecase-grid">
+      <div class="usecase-text">
+        <div class="callout callout-info" style="margin:0">
+          <div class="callout-icon">💡</div>
+          <div><strong>运行效果</strong>每天 08:30 自动推送今日日程，包含：会议时间、参会人员、议题摘要、未读消息提醒。</div>
+        </div>
+        <div style="margin-top:16px;font-size:12px;color:var(--text2)">
+          <div style="margin-bottom:8px;color:var(--accent);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.08em">// SUPPORTED_PLATFORMS</div>
+          <div>✅ Google Calendar &nbsp; ✅ Apple Calendar &nbsp; ✅ Outlook</div>
+          <div>✅ 飞书日历 &nbsp; ✅ 钉钉日历 &nbsp; ✅ Notion</div>
+        </div>
+      </div>
+      <div class="screenshot-frame">
+        <div class="screenshot-bar">
+          <div style="background:#ff5f57;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="background:#febc2e;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="background:#28c840;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="flex:1;text-align:center;font-size:10px;color:var(--text3)">Telegram — OpenClaw Bot</div>
+        </div>
+        <div style="background:#0f0f1a;padding:16px;font-family:inherit">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border)">
+            <div style="width:36px;height:36px;background:linear-gradient(135deg,#9d8cf8,#f472b6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🤖</div>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:var(--text)">OpenClaw Assistant</div>
+              <div style="font-size:10px;color:var(--text3)">Bot · today 08:30</div>
+            </div>
+          </div>
+          <div style="background:rgba(139,124,246,0.1);border:1px solid rgba(139,124,246,0.2);border-radius:10px;padding:14px;font-size:12px;line-height:1.7;color:var(--text)">
+            <div style="margin-bottom:10px;font-weight:700;color:var(--accent)">📅 今日日程 · 2026年3月22日</div>
+            <div style="margin-bottom:8px;display:flex;align-items:center;gap:8px">
+              <span style="background:rgba(139,124,246,0.2);color:var(--accent);padding:2px 8px;border-radius:4px;font-size:10px;flex-shrink:0">09:00</span>
+              <span style="color:var(--text2)">产品评审会 (2h) · 4人参会</span>
+            </div>
+            <div style="margin-bottom:8px;display:flex;align-items:center;gap:8px">
+              <span style="background:rgba(244,114,182,0.2);color:#f472b6;padding:2px 8px;border-radius:4px;font-size:10px;flex-shrink:0">14:00</span>
+              <span style="color:var(--text2)">Sprint Planning (1.5h)</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="background:rgba(251,191,36,0.15);color:#fbbf24;padding:2px 8px;border-radius:4px;font-size:10px;flex-shrink:0">16:30</span>
+              <span style="color:var(--text2)">Team Sync · ⚠️ 3条未读消息</span>
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-tag tag-purple">CASE_01</div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:48px 0">
+
+  <!-- USE CASE 2: Email -->
+  <div class="usecase-section reveal">
+    <div class="usecase-header">
+      <span class="usecase-num">CASE_02</span>
+      <span class="usecase-title">📧 邮件智能分类</span>
+    </div>
+    <p class="usecase-desc">接入 IMAP/SMTP，自动分类重要邮件，高优先级邮件转发到消息平台，每天节省 30 分钟邮件处理时间。</p>
+    <div class="usecase-grid">
+      <div class="screenshot-frame">
+        <div class="screenshot-bar">
+          <div style="background:#ff5f57;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="background:#febc2e;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="background:#28c840;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="flex:1;text-align:center;font-size:10px;color:var(--text3)">Dashboard — email_skill</div>
+        </div>
+        <div style="background:#0f0f1a;padding:16px;font-family:inherit">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
+            <div style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);border-radius:8px;padding:12px;text-align:center">
+              <div style="font-size:22px;font-weight:800;color:#ef4444">3</div>
+              <div style="font-size:10px;color:var(--text3)">高优先级</div>
+            </div>
+            <div style="background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.2);border-radius:8px;padding:12px;text-align:center">
+              <div style="font-size:22px;font-weight:800;color:#fbbf24">12</div>
+              <div style="font-size:10px;color:var(--text3)">待处理</div>
+            </div>
+            <div style="background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:12px;text-align:center">
+              <div style="font-size:22px;font-weight:800;color:#4ade80">179</div>
+              <div style="font-size:10px;color:var(--text3)">已归档</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">// HIGH_PRIORITY</div>
+          <div style="border:1px solid rgba(239,68,68,0.3);border-radius:8px;overflow:hidden">
+            <div style="background:rgba(239,68,68,0.08);padding:10px 12px;border-bottom:1px solid rgba(239,68,68,0.2);display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-size:12px;color:var(--text);font-weight:700">urgent_contract_review.pdf</div>
+                <div style="font-size:10px;color:var(--text3)">client@lawfirm.cn · 3 minutes ago</div>
+              </div>
+              <span style="background:rgba(239,68,68,0.2);color:#ef4444;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px">URGENT</span>
+            </div>
+            <div style="padding:10px 12px;display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-size:12px;color:var(--text)">Invoice #2026-0388 Pending</div>
+                <div style="font-size:10px;color:var(--text3)">accounting@vendor.com · 1 hour ago</div>
+              </div>
+              <span style="background:rgba(251,191,36,0.2);color:#fbbf24;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px">HIGH</span>
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-tag tag-pink">CASE_02</div>
+      </div>
+      <div class="usecase-text">
+        <div class="callout callout-good" style="margin:0">
+          <div class="callout-icon">✅</div>
+          <div><strong>支持所有主流邮箱</strong>Gmail · Outlook · 163邮箱 · QQ邮箱 · 企业邮箱（IMAP/SMTP 兼容）</div>
+        </div>
+        <div style="margin-top:16px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px">
+          <div style="font-size:11px;color:var(--accent);font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:.08em">// AUTOMATION_RULES</div>
+          <div style="font-size:12px;color:var(--text2);line-height:2">
+            <div>if sender in [重要客户]: <span style="color:#4ade80">→ 标记 HIGH</span></div>
+            <div>if subject contains [合同/发票]: <span style="color:#4ade80">→ 标记 HIGH</span></div>
+            <div>if unread > 7 days: <span style="color:var(--text3)">→ Auto-archive</span></div>
+            <div>if HIGH: <span style="color:#fbbf24">→ 推送到 Telegram</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:48px 0">
+
+  <!-- USE CASE 3: Xiaohongshu -->
+  <div class="usecase-section reveal">
+    <div class="usecase-header">
+      <span class="usecase-num">CASE_03</span>
+      <span class="usecase-title">📊 小红书舆情监控</span>
+    </div>
+    <p class="usecase-desc">品牌方监控小红书关键词，自动收集帖子、评论、互动数据，生成舆情报告推送到飞书群。</p>
+    <div class="usecase-grid">
+      <div class="usecase-text">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px">
+          <div style="font-size:11px;color:var(--accent);font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.08em">// SENTIMENT_ANALYSIS</div>
+          <div style="margin-bottom:10px">
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:4px">
+              <span>😊 正向</span><span style="color:#4ade80;font-weight:700">68%</span>
+            </div>
+            <div style="height:6px;background:var(--surface3);border-radius:3px;overflow:hidden">
+              <div style="height:100%;width:68%;background:linear-gradient(90deg,#4ade80,#22c55e);border-radius:3px"></div>
+            </div>
+          </div>
+          <div style="margin-bottom:10px">
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:4px">
+              <span>😐 中立</span><span style="color:#fbbf24;font-weight:700">24%</span>
+            </div>
+            <div style="height:6px;background:var(--surface3);border-radius:3px;overflow:hidden">
+              <div style="height:100%;width:24%;background:linear-gradient(90deg,#fbbf24,#f59e0b);border-radius:3px"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text2);margin-bottom:4px">
+              <span>😠 负向</span><span style="color:#ef4444;font-weight:700">8%</span>
+            </div>
+            <div style="height:6px;background:var(--surface3);border-radius:3px;overflow:hidden">
+              <div style="height:100%;width:8%;background:linear-gradient(90deg,#ef4444,#dc2626);border-radius:3px"></div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:20px;font-weight:800;color:#9d8cf8">2,847</div>
+            <div style="font-size:10px;color:var(--text3)">相关笔记</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:20px;font-weight:800;color:#f472b6">891K</div>
+            <div style="font-size:10px;color:var(--text3)">总互动</div>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-frame">
+        <div class="screenshot-bar">
+          <div style="background:#ff5f57;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="background:#febc2e;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="background:#28c840;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+          <div style="flex:1;text-align:center;font-size:10px;color:var(--text3)">飞书群 — 舆情推送机器人</div>
+        </div>
+        <div style="background:#0f0f1a;padding:16px;font-family:inherit">
+          <div style="background:linear-gradient(135deg,rgba(139,124,246,0.15),rgba(244,114,182,0.1));border:1px solid rgba(139,124,246,0.3);border-radius:10px;padding:14px;margin-bottom:10px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+              <div style="width:32px;height:32px;background:linear-gradient(135deg,#9d8cf8,#f472b6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px">📊</div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:var(--text)">小红书舆情报告</div>
+                <div style="font-size:10px;color:var(--text3)">关键词: AI助理 · 2026-03-15~22</div>
+              </div>
+            </div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.7">
+              <div style="margin-bottom:6px">🔥 <strong style="color:var(--text)">TOP1:</strong> <span style="color:#9d8cf8">"用了3个月AI助理，效率提升200%"</span></div>
+              <div style="color:var(--text3);font-size:10px;margin-left:16px">👍 12.4k &nbsp; ⭐ 8.2k &nbsp; 💬 1.2k</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text2);padding:8px 0">
+            <div style="color:var(--text3);margin-bottom:4px;font-size:10px">自动推送 · 每天 09:00</div>
+            <div style="color:#4ade80">✓ 飞书群推送成功</div>
+          </div>
+        </div>
+        <div class="screenshot-tag tag-yellow">CASE_03</div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:48px 0">
+
+  <!-- USE CASE 4: SEO -->
+  <div class="usecase-section reveal">
+    <div class="usecase-header">
+      <span class="usecase-num">CASE_04</span>
+      <span class="usecase-title">🔍 SEO 全自动审计</span>
+    </div>
+    <p class="usecase-desc">输入任意网站 URL，OpenClaw 自动运行 230+ SEO 规则审计，生成健康评分、问题列表和修复建议。</p>
+    <div class="screenshot-frame reveal" style="max-width:700px;margin:0 auto">
+      <div class="screenshot-bar">
+        <div style="background:#ff5f57;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+        <div style="background:#febc2e;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+        <div style="background:#28c840;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+        <div style="flex:1;text-align:center;font-size:10px;color:var(--text3)">SquirrelScan // SEO Audit Report</div>
+      </div>
+      <div style="background:#0f0f1a;padding:20px;font-family:inherit">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border)">
+          <div>
+            <div style="font-size:11px;color:var(--text3);margin-bottom:2px">TARGET URL</div>
+            <div style="font-size:14px;color:var(--accent2)">https://openclaw.ai</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:11px;color:var(--text3);margin-bottom:2px">HEALTH SCORE</div>
+            <div style="font-size:28px;font-weight:800;background:linear-gradient(135deg,#9d8cf8,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">87/100</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px">
+          <div style="text-align:center;padding:10px;background:var(--surface);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:18px;font-weight:700;color:#4ade80">189</div>
+            <div style="font-size:10px;color:var(--text3)">通过</div>
+          </div>
+          <div style="text-align:center;padding:10px;background:var(--surface);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:18px;font-weight:700;color:#fbbf24">23</div>
+            <div style="font-size:10px;color:var(--text3)">警告</div>
+          </div>
+          <div style="text-align:center;padding:10px;background:var(--surface);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:18px;font-weight:700;color:#ef4444">8</div>
+            <div style="font-size:10px;color:var(--text3)">错误</div>
+          </div>
+          <div style="text-align:center;padding:10px;background:var(--surface);border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:18px;font-weight:700;color:var(--accent2)">342</div>
+            <div style="font-size:10px;color:var(--text3)">已爬取</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--accent);font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">// CRITICAL_ISSUES</div>
+        <div style="border:1px solid rgba(239,68,68,0.3);border-radius:8px;overflow:hidden;margin-bottom:12px">
+          <div style="background:rgba(239,68,68,0.08);padding:10px 12px;border-bottom:1px solid rgba(239,68,68,0.2);font-size:11px;color:#ef4444;font-weight:700">⚠ 8 Critical Issues Found</div>
+          <div style="padding:10px 12px;font-size:12px;color:var(--text2);line-height:2">
+            <div>• 3 pages return 404 (broken links)</div>
+            <div>• Meta description missing: 2 pages</div>
+            <div>• H1 missing: 5 pages</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--accent4);font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">// WARNINGS</div>
+        <div style="border:1px solid rgba(251,191,36,0.3);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--text2);line-height:2">
+          <div>• PageSpeed Mobile: 58/100</div>
+          <div>• Image alt tags missing: 27 images</div>
+          <div>• External links nofollow: 0 (consider adding)</div>
+        </div>
+      </div>
+      <div class="screenshot-tag tag-blue">CASE_04</div>
+    </div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:48px 0">
+
+  <!-- USE CASE 5: Enterprise -->
+  <div class="usecase-section reveal">
+    <div class="usecase-header">
+      <span class="usecase-num">CASE_05</span>
+      <span class="usecase-title">🏢 企业私有化部署</span>
+    </div>
+    <p class="usecase-desc">律师事务所、金融机构、医院等高合规要求场景，OpenClaw 部署在客户自有服务器，数据完全不出企业网络。</p>
+    <div class="screenshot-frame reveal" style="max-width:700px;margin:0 auto">
+      <div class="screenshot-bar">
+        <div style="background:#ff5f57;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+        <div style="background:#febc2e;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+        <div style="background:#28c840;border-radius:50%;width:10px;height:10px;flex-shrink:0"></div>
+        <div style="flex:1;text-align:center;font-size:10px;color:var(--text3)">Enterprise Dashboard — Private Deployment</div>
+      </div>
+      <div style="background:#0f0f1a;padding:20px;font-family:inherit">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px">
+          <div style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:14px;text-align:center">
+            <div style="font-size:24px;margin-bottom:6px">🏢</div>
+            <div style="font-size:13px;font-weight:700;color:#4ade80">Private LAN</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px">数据不出防火墙</div>
+          </div>
+          <div style="background:rgba(139,124,246,0.08);border:1px solid rgba(139,124,246,0.2);border-radius:8px;padding:14px;text-align:center">
+            <div style="font-size:24px;margin-bottom:6px">🔒</div>
+            <div style="font-size:13px;font-weight:700;color:#9d8cf8">Zero Cloud</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px">100% 本地化</div>
+          </div>
+          <div style="background:rgba(251,191,36,0.08);border:1px solid rgba(251,191,36,0.2);border-radius:8px;padding:14px;text-align:center">
+            <div style="font-size:24px;margin-bottom:6px">⚡</div>
+            <div style="font-size:13px;font-weight:700;color:#fbbf24">99.9% SLA</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px">企业级保障</div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--text3);margin-bottom:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em">// DEPLOYMENT_CONFIG</div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+          <div style="display:flex;padding:10px 14px;border-bottom:1px solid var(--border);font-size:11px;color:var(--text3)">
+            <div style="flex:1">配置项</div>
+            <div style="flex:1">值</div>
+            <div style="flex:1">状态</div>
+          </div>
+          <div style="display:flex;padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--text2)">
+            <div style="flex:1">Client</div><div style="flex:1;color:var(--text)">某律师事务所（北京）</div><div style="flex:1"><span style="color:#4ade80">✓ Active</span></div>
+          </div>
+          <div style="display:flex;padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--text2)">
+            <div style="flex:1">AI Model</div><div style="flex:1;color:var(--text)">Ollama (Llama3.3) 本地</div><div style="flex:1"><span style="color:#4ade80">✓ Running</span></div>
+          </div>
+          <div style="display:flex;padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--text2)">
+            <div style="flex:1">Gateway</div><div style="flex:1;color:var(--accent2)">192.168.1.100:18789</div><div style="flex:1"><span style="color:#4ade80">✓ Online</span></div>
+          </div>
+          <div style="display:flex;padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--text2)">
+            <div style="flex:1">Channels</div><div style="flex:1;color:var(--text)">飞书 · 企业微信（合规）</div><div style="flex:1"><span style="color:#4ade80">✓ 2 Connected</span></div>
+          </div>
+          <div style="display:flex;padding:10px 14px;font-size:12px;color:var(--text2)">
+            <div style="flex:1">Data Policy</div><div style="flex:1;color:#4ade80;font-weight:700">ALL DATA IN LAN</div><div style="flex:1"><span style="color:#4ade80">✓ Compliant</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="screenshot-tag tag-purple">CASE_05</div>
+    </div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:48px 0">
+
+  <!-- USE CASE 6: Browser Automation -->
+  <div class="usecase-section reveal">
+    <div class="usecase-header">
+      <span class="usecase-num">CASE_06</span>
+      <span class="usecase-title">🤖 Browser 自动化</span>
+    </div>
+    <p class="usecase-desc">OpenClaw 内置浏览器自动化，无需额外工具即可抓取数据、填写表单、截图存档——比 Playwright 简单 10 倍。</p>
+    <div class="usecase-grid">
+      <div class="screenshot-frame">
+        <div class="screenshot      </div>
+    </div>
   </div>
 </div>
 
-<hr class="divider">
+
+
 
 <!-- 02 PRODUCT -->
 <div class="section" id="product">
